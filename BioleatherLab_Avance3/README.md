@@ -4,7 +4,7 @@ Prototipo académico para gestionar un catálogo de accesorios conceptuales, cue
 
 ## Tecnologías y arquitectura
 
-- **Servidor:** Java 17 (versión objetivo), Spring Boot 3.5.16, Maven y JDBC.
+- **Servidor:** Java 17, Spring Boot 3.5.16, Maven y JDBC.
 - **Frontend web:** HTML, CSS y JavaScript, servido por Spring Boot.
 - **Datos:** H2 persistente en el entorno local; perfil MySQL opcional (no validado en las pruebas realizadas).
 - **Seguridad:** BCrypt para contraseñas, sesiones temporales en memoria, autorización por roles, validación de entradas y cabeceras HTTP.
@@ -102,14 +102,3 @@ La alternativa B del navegador funciona sin Android Studio. El proyecto nativo `
 - **Reporte Excel:** `GET /api/admin/reports/orders.xlsx` (solo administrador).
 
 Las rutas protegidas utilizan `Authorization: Bearer <token>`. Las pruebas automatizadas están en `servidor/src/test/java/pe/bioleather/ApiIntegracionTest.java` y se ejecutan con `mvn clean test`. La comprobación de 12 pruebas corresponde a la ejecución reportada en el equipo del estudiante; las pruebas manuales se documentaron por separado.
-
-## Pendientes para la entrega
-
-- Actualizar el informe con la arquitectura implementada, una matriz de cobertura RF01–RF08 y capturas de las funciones probadas.
-- Incluir evidencias concretas del uso de Guava, Commons Lang, POI y Logback.
-- Documentar pruebas no funcionales: rendimiento, compatibilidad y respaldos; revisar el contenido del Excel frente a los pedidos mostrados.
-- Diferenciar la base H2 utilizada de la opción MySQL, aún sin validar; justificar cómo se evalúa el porcentaje de Java.
-- Confirmar con el docente la consigna aplicable sobre cantidad de pantallas: el alcance actual refleja A1–A5, B1–B5 y C1–C8, mientras que otro documento del curso menciona diez pantallas por alternativa.
-- Preparar las evidencias y la sustentación; realizar la publicación en GitHub al final con un historial auténtico, sin incluir credenciales ni datos privados.
-
-Este proyecto es un prototipo local, no una implementación aceptada por la empresa ni preparada para producción. Antes de un despliegue real habría que validar los procesos y reforzar HTTPS, gestión de secretos, concurrencia, protección contra abuso, pruebas y copias de seguridad.
