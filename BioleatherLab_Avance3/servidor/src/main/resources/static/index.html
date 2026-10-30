@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bioleather Lab · Gestión de pedidos</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="mark">B</span
+        ><span
+          >Bioleather Lab<small>Accesorios de diseño conceptual</small></span
+        >
+      </div>
+      <nav>
+        <button data-view="home" id="homeLink" hidden>Inicio</button
+        ><button data-view="catalog">Catálogo</button
+        ><button data-view="cart">Solicitud <b id="cartCount">0</b></button
+        ><button data-view="orders">Mis pedidos</button
+        ><button data-view="admin" id="adminLink" hidden>Administración</button
+        ><button data-view="account" id="accountLink">Ingresar</button>
+      </nav>
+    </header>
+    <main>
+      <aside class="intro">
+        <span class="eyebrow" id="variant">ALTERNATIVA C · WEB INTEGRAL</span>
+        <h1>Diseño consciente,<br />pedidos claros.</h1>
+        <p>
+          Explora carteras, billeteras y correas. Registra una solicitud y
+          consulta su estado desde tu cuenta.
+        </p>
+        <div class="accent"></div>
+        <p class="note">
+          Prototipo académico con productos y precios ilustrativos. No procesa
+          pagos ni confirma entregas.
+        </p>
+        <div class="switch">
+          <a href="/alternativas.html">Ver las tres alternativas</a
+          ><a href="/?modo=C">Web integral C</a
+          ><a href="/?modo=A">Web básica A</a
+          ><a href="/?modo=B">Vista móvil B</a>
+        </div>
+      </aside>
+      <section id="app" aria-live="polite"></section>
+    </main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

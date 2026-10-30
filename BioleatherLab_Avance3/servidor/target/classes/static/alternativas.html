@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bioleather Lab · Tres alternativas</title>
+    <style>
+      :root {
+        --forest: #163e32;
+        --green: #176b55;
+        --ink: #111a16;
+        --muted: #52665a;
+        --line: #d5e2d7;
+        --paper: #f6f7f2;
+        --soft: #e7f0e7;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        font:
+          16px Arial,
+          sans-serif;
+        color: var(--ink);
+      }
+      header {
+        background: var(--forest);
+        color: white;
+        padding: 19px max(5vw, 24px);
+        font-size: 22px;
+        font-weight: 800;
+      }
+      header span {
+        background: #d9e9a1;
+        color: var(--forest);
+        padding: 7px 12px;
+        border-radius: 11px;
+        margin-right: 10px;
+      }
+      main {
+        max-width: 1190px;
+        margin: 55px auto;
+        padding: 0 24px;
+      }
+      h1,
+      h2 {
+        color: #000;
+        font-weight: 800;
+      }
+      h1 {
+        font-size: 38px;
+        margin: 0 0 12px;
+      }
+      p {
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .lead {
+        max-width: 720px;
+        margin-bottom: 30px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px #1e4e3813;
+      }
+      .card img {
+        width: 100%;
+        height: 225px;
+        object-fit: cover;
+      }
+      .body {
+        padding: 24px;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+      }
+      .tag {
+        background: var(--soft);
+        color: var(--forest);
+        font-weight: 800;
+        font-size: 12px;
+        border-radius: 30px;
+        padding: 8px 12px;
+        align-self: flex-start;
+      }
+      .body h2 {
+        font-size: 24px;
+        margin: 19px 0 7px;
+      }
+      .body p {
+        margin: 0 0 25px;
+        flex: 1;
+      }
+      .body a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        background: var(--green);
+        color: white;
+        font-weight: 800;
+        border-radius: 10px;
+        padding: 14px;
+      }
+      .body a:hover {
+        background: #10543f;
+      }
+      .note {
+        margin-top: 30px;
+        font-size: 13px;
+      }
+      @media (max-width: 800px) {
+        main {
+          margin: 30px auto;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .card {
+          max-width: 520px;
+        }
+        .card img {
+          height: 230px;
+        }
+        h1 {
+          font-size: 31px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header><span>B</span>Bioleather Lab</header>
+    <main>
+      <h1>Alternativas del Informe 2</h1>
+      <p class="lead">
+        Elige una alternativa. Las tres usan el mismo servidor Java y datos de
+        prueba. Puedes volver a esta página escribiendo
+        <strong>localhost:8080/alternativas.html</strong>.
+      </p>
+      <div class="grid">
+        <article class="card">
+          <img src="/img/cartera.png" alt="Cartera ilustrativa" />
+          <div class="body">
+            <span class="tag">A1–A5</span>
+            <h2>A · Web básica</h2>
+            <p>Catálogo, ficha, registro, solicitud y consulta por código.</p>
+            <a href="/?modo=A">Abrir alternativa A</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="/img/correa.png" alt="Correa ilustrativa" />
+          <div class="body">
+            <span class="tag">B1–B5</span>
+            <h2>B · Móvil</h2>
+            <p>
+              Vista móvil en el navegador: inicio, catálogo, detalle, solicitud
+              y pedidos.
+            </p>
+            <a href="/?modo=B">Abrir alternativa B</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="/img/billetera.png" alt="Billetera ilustrativa" />
+          <div class="body">
+            <span class="tag">C1–C8 · ELEGIDA</span>
+            <h2>C · Web integral</h2>
+            <p>
+              Catálogo, carrito, historial y administración de productos,
+              pedidos y clientes.
+            </p>
+            <a href="/?modo=C">Abrir alternativa C</a>
+          </div>
+        </article>
+      </div>
+      <p class="note">
+        Prototipo académico. Productos, precios e imágenes ilustrativos. Sin
+        pagos en línea.
+      </p>
+    </main>
+  </body>
+</html>
